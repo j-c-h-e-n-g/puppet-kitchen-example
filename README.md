@@ -1,6 +1,12 @@
 ## About
 
-I need a test environment for a puppet server, so why not harness the power of vagrant? Why wouldn't I want a reproducible setup of a puppet server all neatly available and version controlled in github? This will converge/create/launch/instantiate a working puppet server when you: `kitchen converge default-centos-65` 
+I need a test environment for a puppet server so I can play with: 
+
+* hiera
+* pupppetdb
+* whatever puppet-related stuff is useful as of April 2015
+
+... so why not harness the power of vagrant? Why wouldn't I want a reproducible setup of a puppet server all neatly available and version controlled in github? This will converge/create/launch/instantiate a working puppet server when you: `kitchen converge default-centos-65` 
 
 This will port forward 8140 to your host's 8140, so now you're serving off a puppet server to your host's network/subnet.
 
