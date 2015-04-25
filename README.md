@@ -12,7 +12,10 @@ This will port forward 8140 to your host's 8140, so now you're serving off a pup
 
 ## Usage
 
-Let's say you want to register your host's puppet client against your vagrant'ized puppet server. In my case for my macbook I have in `/etc/hosts`: 
+On the guest puppet server VM you should be able do a client puppet run against the server on the same node. Do something like this:
+`puppet agent --test --server default-centos-65.vagrantup.com`
+
+Now let's say you want to register your host's puppet client against your vagrant'ized puppet server. In my case for my macbook I have in `/etc/hosts`: 
 
     127.0.0.1	localhost default-centos-65.vagrantup.com 
 
