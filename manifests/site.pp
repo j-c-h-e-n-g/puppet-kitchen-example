@@ -21,18 +21,29 @@ file { "/etc/puppet/hieradata":
 }
 
 
-#file { "/etc/puppet/hiera.yaml":
-#  ensure => "file",
-#  content => template("puppetmasterplayground/hiera.yaml.erb"),
-#}
+$hiera_content = '
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: /etc/puppet/hieradata
+:hierarchy:
+  - "node/%{::fqdn}"
+  - common
+'
+
+file { "/etc/puppet/hiera.yaml":
+  ensure => "file",
+  content => "$hiera_content"
+}
 
 
-#class { 'puppetdb':
-#  listen_address => 'default-centos-65.vagrantup.com'
-#}
-#->
-#class { 'puppetdb::master::config':
-#}
+class { 'puppetdb':
+  listen_address => 'default-centos-65.vagrantup.com'
+}
+->
+class { 'puppetdb::master::config':
+}
 
 
 
