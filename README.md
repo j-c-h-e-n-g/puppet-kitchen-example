@@ -3,7 +3,7 @@
 This is WFM (works for me) quality: there are no promises this will work for you. Via a local `puppet apply` will create a puppet server (puppetmaster) in a guest VM. On that VM is where my puppetmaster playground will be. I require a test environment for a puppet server so I can play with: 
 
 * hiera
-* pupppetdb
+* puppetdb
 * whatever puppet-related stuff is useful as of April 2015
 
 
