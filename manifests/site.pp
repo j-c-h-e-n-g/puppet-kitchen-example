@@ -15,3 +15,24 @@ service {"puppetmaster":
 } 
 
 
+
+file { "/etc/puppet/hieradata":
+  ensure => "directory",
+}
+
+
+#file { "/etc/puppet/hiera.yaml":
+#  ensure => "file",
+#  content => template("puppetmasterplayground/hiera.yaml.erb"),
+#}
+
+
+#class { 'puppetdb':
+#  listen_address => 'default-centos-65.vagrantup.com'
+#}
+#->
+#class { 'puppetdb::master::config':
+#}
+
+
+
