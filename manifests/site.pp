@@ -32,7 +32,7 @@ $hiera_content = '
   - common
 '
 
-file { "/etc/puppet/hiera.yaml":
+file { "/etc/hiera.yaml":
   ensure => "file",
   content => "$hiera_content"
 }
