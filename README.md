@@ -1,6 +1,8 @@
 ## About
 
-This is WFM (works for me) quality: there are no promises this will work for you. Via a local `puppet apply` will create a puppet server (puppetmaster) in a guest VM. On that VM is where my puppetmaster playground will be. I require a test environment for a puppet server so I can play with: 
+This is meant to be one shot, installation of a puppet server via a local `puppet apply`. In other words: create the puppet server, and then play with it later on -- not meant to be a puppetmaster you evolve and scale to handle every possible scenario.
+
+I require a test environment for a puppet server so I can play with: 
 
 * hiera
 * puppetdb
@@ -58,6 +60,11 @@ So on the vagrant'ized puppet server, you'll see the request:
     Info: Caching catalog for 5cf93894a556.local
     Info: Applying configuration version '1429988989'
     Notice: Finished catalog run in 0.01 seconds
+    
+    
+## Disclaimer
+
+This is WFM (works for me) quality: there are no promises this will work for you. 
 
 
 
