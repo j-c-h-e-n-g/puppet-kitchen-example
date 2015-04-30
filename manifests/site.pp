@@ -3,7 +3,6 @@ class { '::ntp':
   servers => [ '0.pool.ntp.org', '1.pool.ntp.org' ],
 }
 
-
 package {["tree", "puppet-server"]: 
   ensure => installed, 
 } 
@@ -14,12 +13,9 @@ service {"puppetmaster":
   hasrestart => true, 
 } 
 
-
-
 file { "/etc/puppet/hieradata":
   ensure => "directory",
 }
-
 
 $hiera_content = '
 ---
@@ -37,13 +33,9 @@ file { "/etc/hiera.yaml":
   content => "$hiera_content"
 }
 
-
 class { 'puppetdb':
   listen_address => 'default-centos-65.vagrantup.com'
 }
 ->
 class { 'puppetdb::master::config':
 }
-
-
-
