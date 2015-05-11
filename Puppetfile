@@ -20,5 +20,7 @@ mod "puppetlabs-registry"
 mod "puppetlabs-stdlib"
 mod "puppetlabs-tomcat"
 mod "puppetlabs-reboot"
+mod "puppetlabs-docker_platform"
 mod "sensu-sensu"
+mod "rtyler-jenkins"
 
