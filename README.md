@@ -13,7 +13,7 @@ I require a test environment for a puppet server so I can play with:
 
 This will port forward 8140 to your host's 8140, so now you're serving off a puppet server to your host's network/subnet.
 
-
+Why Test Kitchen? Simply because "it works for me" - or specifically, it's something I invested time into recently and will continue to use it until I find time to play with `beaker` or something else.
 ## Usage
 
 On the guest puppet server VM you should be able do a client puppet run against the server on the same node. Do something like this:
