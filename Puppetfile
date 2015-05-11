@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #^syntax detection
 
-forge "http://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
 # use dependencies defined in Modulefile
 mod "puppetlabs-acl"
@@ -20,4 +20,5 @@ mod "puppetlabs-registry"
 mod "puppetlabs-stdlib"
 mod "puppetlabs-tomcat"
 mod "puppetlabs-reboot"
+mod "sensu-sensu"
 
