@@ -8,13 +8,17 @@ I require a test environment for a puppet server so I can play with:
 * puppetdb
 * whatever puppet-related stuff is useful as of April 2015
 
-
-... so why not harness the power of vagrant? Why wouldn't I want a reproducible setup of a puppet server all neatly available and version controlled in github? This will converge/create/launch/instantiate a working puppet server when you: `kitchen converge default-centos-65` 
-
-This will port forward 8140 to your host's 8140, so now you're serving off a puppet server to your host's network/subnet.
-
 Why Test Kitchen? Simply because "it works for me" - or specifically, it's something I invested time into recently and will continue to use it until I find time to play with `beaker` or something else.
-## Usage
+
+## Details
+
+This will:
+
+* converge/create/launch/instantiate a working puppet server when you: `kitchen converge default-centos-65` 
+* port forward 8140 to your host's 8140 to make the puppetmaster available to your local network/subnet
+
+
+## Usage 
 
 On the guest puppet server VM you should be able do a client puppet run against the server on the same node. Do something like this:
 `puppet agent --test --server default-centos-65.vagrantup.com`
@@ -65,15 +69,6 @@ So on the vagrant'ized puppet server, you'll see the request:
 ## Disclaimer
 
 This is WFM (works for me) quality: there are no promises this will work for you. 
-
-
-
-
-
-
-
-
-
 
 
 inspired from: http://ehaselwanter.com/en/blog/2014/05/08/using-test-kitchen-with-puppet/
