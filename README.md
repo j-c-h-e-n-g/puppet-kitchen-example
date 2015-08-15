@@ -1,5 +1,7 @@
 ## About
 
+**Note** - this is somewhat less useful when there's prebuilt vagrant boxes available by puppetlabs https://atlas.hashicorp.com/puppetlabs
+
 This is meant to be one shot, installation of a puppet server via a local `puppet apply`. In other words: create the puppet server, and then play with it later on -- not meant to be a puppetmaster you evolve and scale to handle every possible scenario.
 
 I require a test environment for a puppet server so I can play with: 
