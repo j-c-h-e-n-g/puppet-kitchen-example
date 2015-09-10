@@ -1,0 +1,24 @@
+---
+
+driver_config:
+  digitalocean_api_token: <%= ENV['DIGITALOCEAN_API_TOKEN'] %>
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
+  flavor_id: <%= ENV['EC2_FLAVOR_ID'] %>
+  availability_zone: <%= ENV['AWS_AVAILABILITY_ZONE'] %>
+
+provisioner:
+  name: puppet_apply
+  manifests_path: manifests
+  modules_path: modules
+  hiera_data_path: hieradata
+
+platforms:
+
+  - name: ubuntu-14-04-x64
+    driver_plugin: digitalocean
+
+suites:
+  - name: default
+    manifest: site.pp
